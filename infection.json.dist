@@ -1,0 +1,17 @@
+{
+    "source": {
+        "directories": [
+            "src"
+        ],
+        "excludes": [
+            "app/Console/ConsoleCommands",
+            "app/Console/Kernel.php",
+            "app/Http/Middleware",
+            "app/Routes"
+        ]
+    },
+    "timeout": 20,
+    "logs": {
+        "text": "storage/logs/infection.log"
+    }
+}
