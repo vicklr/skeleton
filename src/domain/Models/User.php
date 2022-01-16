@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Domain\Models;
 
@@ -11,30 +12,9 @@ use Laravel\Sanctum\HasApiTokens;
 /**
  * @property int $id
  */
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var string[]
-     */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
 
     /**
      * The attributes that should be cast.

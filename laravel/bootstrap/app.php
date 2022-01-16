@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,9 @@
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
-$app->useAppPath($app->basePath('src/app'));
-
+$app->useAppPath($app->basePath('../src/app'));
+$app->useStoragePath($app->basePath('../storage'));
+$app->useEnvironmentPath($app->basePath('../'));
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces

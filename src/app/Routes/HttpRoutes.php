@@ -11,6 +11,6 @@ class HttpRoutes
 {
     public static function routes(Router $router): void
     {
-
+        $router->get('/', fn() => 'ok');
     }
 }
