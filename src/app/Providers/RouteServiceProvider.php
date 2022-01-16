@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use App\Routes\ApiRoutes;
-use App\Routes\HttpRoutes;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -21,16 +20,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
-
-    /**
-     * The controller namespace for the application.
-     *
-     * When present, controller route declarations will automatically be prefixed with this namespace.
-     *
-     * @var string|null
-     */
-    // protected $namespace = 'App\\Http\\Controllers';
+    public const HOME = '/';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -42,14 +32,8 @@ class RouteServiceProvider extends ServiceProvider
         $this->configureRateLimiting();
 
         $this->routes(function () {
-            Route::prefix('api')
-                ->middleware('api')
-                ->namespace($this->namespace)
+            Route::middleware('api')
                 ->group(fn (Router $router) => ApiRoutes::routes($router));
-
-            Route::middleware('web')
-                ->namespace($this->namespace)
-                ->group(fn (Router $router) => HttpRoutes::routes($router));
         });
     }
 
