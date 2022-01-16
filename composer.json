@@ -33,8 +33,7 @@
             "App\\": "src/app",
             "Domain\\": "src/domain",
             "UseCases\\": "src/usecases",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\": "src/database",
         }
     },
     "autoload-dev": {
