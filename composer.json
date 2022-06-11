@@ -9,21 +9,21 @@
         "doctrine/dbal": "^3.2.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.65",
+        "laravel/framework": "^9.17",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "pusher/pusher-php-server": "^7.0.1"
     },
     "require-dev": {
         "brianium/paratest": "^6.4",
-        "facade/ignition": "^2.5",
+        "spatie/laravel-ignition": "^1.0",
         "fakerphp/faker": "^1.9.1",
         "infection/infection": "^0.25.3",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^5.10",
+        "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^9.5.10",
-        "psalm/plugin-laravel": "^1.2.0",
+        "psalm/plugin-laravel": "^v2.0.0",
         "psalm/plugin-mockery": "^0.9.1",
         "psalm/plugin-phpunit": "^0.16.1",
         "vimeo/psalm": "^4.13.1"
@@ -64,7 +64,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
