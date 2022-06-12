@@ -5,7 +5,7 @@
         <directory name="tests"/>
         <ignoreFiles>
             <directory name="laravel/bootstrap"/>
-            <directory name="laravel/vendor"/>
+            <directory name="vendor"/>
         </ignoreFiles>
     </projectFiles>
     <issueHandlers>
