@@ -4,8 +4,8 @@
         <directory name="src"/>
         <directory name="tests"/>
         <ignoreFiles>
-            <directory name="bootstrap"/>
-            <directory name="vendor"/>
+            <directory name="laravel/bootstrap"/>
+            <directory name="laravel/vendor"/>
         </ignoreFiles>
     </projectFiles>
     <issueHandlers>

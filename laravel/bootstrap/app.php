@@ -15,8 +15,8 @@ declare(strict_types=1);
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
-$app->useAppPath($app->basePath('src/app'));
-$app->useDatabasePath($app->basePath('src/database'));
+$app->useAppPath($app->basePath('../src/app'));
+$app->useDatabasePath($app->basePath('../src/database'));
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
