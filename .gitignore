@@ -5,5 +5,10 @@ yarn-error.log
 /vendor
 .env
 .env.backup
+/public/hot
+/public/storage
+/storage/*
+Homestead.json
+Homestead.yaml
 /.idea
 /.vscode
