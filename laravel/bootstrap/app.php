@@ -17,6 +17,7 @@ $app = new Illuminate\Foundation\Application(
 );
 $app->useAppPath($app->basePath('../src/app'));
 $app->useDatabasePath($app->basePath('../src/database'));
+$app->useEnvironmentPath($app->basePath('..'));
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
