@@ -11,10 +11,10 @@ class ApiRoutes
 {
     public static function routes(Router $router): void
     {
-        $router->get('/', fn() => 'ok');
+        $router->get('/', fn () => 'ok');
 
         $router->group(['middleware' => 'auth:sanctum'], function (Router $router) {
-            $router->get('/user', fn(Request $request): mixed => $request->user());
+            $router->get('/user', fn (Request $request): mixed => $request->user());
         });
     }
 }
